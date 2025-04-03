@@ -6,9 +6,9 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import { FC } from "react";
 import "../../App.css";
-import { SkipData } from "../../Data";
 import { useCardList } from "../../hooks/useCardList";
 import { textColor } from "../../styles";
+import { SkipData } from "../../types/skipSize";
 
 export type CardProps = { skip: SkipData };
 export const Card: FC<CardProps> = ({ skip }) => {

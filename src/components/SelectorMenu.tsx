@@ -28,7 +28,7 @@ export const SelectorMenu: FC<SelectorMenuProps> = () => {
 		<div
 			className={`sticky bottom-0 border-t border-[#2E7D32] p-4 ${bgColor.darkGreen} ${textColor.lightGreen}`}
 		>
-			<div className="flex justify-between mt-4">
+			<div className="flex justify-between">
 				<NextPrevButton size="small" color="success" variant="outlined">
 					Back
 				</NextPrevButton>

@@ -1,8 +1,6 @@
 "use client";
-
 import { createContext, PropsWithChildren, useContext, useState } from "react";
-import { SkipDataAccum } from "../Data";
-
+import { SkipDataAccum } from "../types/skipSize";
 type CardListContextProps = {
 	selectedData: SkipDataAccum | undefined;
 	set: (data: SkipDataAccum) => void;
