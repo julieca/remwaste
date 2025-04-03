@@ -10,6 +10,13 @@ import { useCardList } from "../../hooks/useCardList";
 import { textColor } from "../../styles";
 import { SkipData } from "../../types/skipSize";
 
+const alertStyle = {
+	padding: "4px",
+	"& .MuiAlert-icon": { marginRight: "8px", padding: "0" },
+	"& .MuiAlert-message": { fontSize: "10px", padding: "0" },
+	backgroundColor: "#fbded0",
+};
+
 export type CardProps = { skip: SkipData };
 export const Card: FC<CardProps> = ({ skip }) => {
 	const { selectedData, set, clear } = useCardList();
@@ -25,6 +32,7 @@ export const Card: FC<CardProps> = ({ skip }) => {
 			set({ ...skip, total });
 		}
 	};
+
 	return (
 		<CardMui
 			key={skip.id}
@@ -83,11 +91,8 @@ export const Card: FC<CardProps> = ({ skip }) => {
 					<Alert
 						severity="error"
 						sx={{
-							padding: "4px",
+							...alertStyle,
 							marginTop: "10px",
-							"& .MuiAlert-icon": { marginRight: "8px", padding: "0" },
-							"& .MuiAlert-message": { fontSize: "10px", padding: "0" },
-							backgroundColor: "#fbded0",
 						}}
 					>
 						<span className="align-sub text-[#b0382c]">
@@ -99,11 +104,8 @@ export const Card: FC<CardProps> = ({ skip }) => {
 					<Alert
 						severity="error"
 						sx={{
-							padding: "4px",
+							...alertStyle,
 							marginTop: "4px",
-							"& .MuiAlert-icon": { marginRight: "8px", padding: "0" },
-							"& .MuiAlert-message": { fontSize: "10px", padding: "0" },
-							backgroundColor: "#fbded0",
 						}}
 					>
 						<span className="align-sub text-[#b0382c]">
