@@ -74,7 +74,7 @@ export const Card: FC<CardProps> = ({ skip }) => {
 					Hire Duration: {skip.hire_period_days} days
 				</p>
 				<p className="text-sm font-extralight">
-					Total Price:{" "}
+					Total Price: &nbsp;
 					<span className="font-light">£{totalPrice.toFixed(2)}</span>
 				</p>
 				{skip.transport_cost && skip.transport_cost > 0 && (
