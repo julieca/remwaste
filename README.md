@@ -16,7 +16,7 @@ I am using the following technologies for this task:
 
 ### State Management
 - Temporary data is stored using **React hooks** for simplicity.
-- In a real-world scenario, **Redux** or **Zustand** would be more suitable for global state management.
+- In a real-world scenario, **Redux** or **Zustand** would be more suitable for global state management. eg. when user selected & click "Next" Button
 
 ### UI/UX Considerations
 - The design focuses on **clean, simple, and clear** layouts to enhance user experience.
