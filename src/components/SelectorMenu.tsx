@@ -26,14 +26,14 @@ export const SelectorMenu: FC<SelectorMenuProps> = () => {
 	if (!selectedData) return null;
 	return (
 		<div
-			className={`sticky bottom-0 border-t border-[#2E7D32] p-4 ${bgColor.darkGreen} ${textColor.lightGreen}`}
+			className={`sticky bottom-0 border-t border-[#2E7D32] p-2 sm:p-4 ${bgColor.darkGreen} ${textColor.lightGreen}`}
 		>
-			<div className="flex justify-between">
+			<div className="flex justify-between items-center">
 				<NextPrevButton size="small" color="success" variant="outlined">
 					Back
 				</NextPrevButton>
 
-				<div className="flex sm:gap-2 items-center sm:flex-row flex-col">
+				<div className="flex sm:gap-2 items-center sm:flex-row flex-col leading-[1.2]">
 					<h2 className="inline">{selectedData.size} Yard Skip</h2>
 					<span className="hidden sm:block">|</span>
 					<span>Hire period: {selectedData.hire_period_days} days</span>
