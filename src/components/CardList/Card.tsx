@@ -49,12 +49,19 @@ export const Card: FC<CardProps> = ({ skip }) => {
 				boxShadow: "none",
 			}}
 		>
+			{skip.area && (
+				<div className="absolute bg-white rounded-[10px] p-[5px] m-[10px] text-[10px]">
+					{skip.area}
+				</div>
+			)}
+
 			<CardMedia
 				component="img"
 				height="140"
 				image="https://images.unsplash.com/photo-1590496793929-36417d3117de?q=80&w=800"
 				alt={`${skip.size}`}
 			/>
+
 			<CardHeader
 				title={
 					<>
@@ -74,17 +81,17 @@ export const Card: FC<CardProps> = ({ skip }) => {
 					Hire Duration: {skip.hire_period_days} days
 				</p>
 				<p className="text-sm font-extralight">
-					Total Price: &nbsp;
+					Price: &nbsp;
 					<span className="font-light">£{totalPrice.toFixed(2)}</span>
 				</p>
 				{skip.transport_cost && skip.transport_cost > 0 && (
 					<p className="text-sm font-extralight">
-						Transport Cost: £{skip.transport_cost}
+						Transport Cost: £{skip.transport_cost.toFixed(2)}
 					</p>
 				)}
 				{skip.per_tonne_cost && skip.per_tonne_cost > 0 && (
 					<p className="text-sm font-extralight">
-						Cost per Tonne: £{skip.per_tonne_cost}
+						Cost per Tonne: £{skip.per_tonne_cost.toFixed(2)}
 					</p>
 				)}
 				{!skip.allowed_on_road && (

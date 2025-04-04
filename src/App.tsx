@@ -11,9 +11,6 @@ function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<div className="App bg-[#faf7ea] pt-6 min-h-screen">
-				{/* <head> */}
-				<title>Business Skip Hire</title>
-				{/* </head> */}
 				<Steps />
 				<CardListProvider>
 					<CardContainer />

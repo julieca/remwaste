@@ -33,10 +33,12 @@ export const SelectorMenu: FC<SelectorMenuProps> = () => {
 					Back
 				</NextPrevButton>
 
-				<div className="flex gap-2 items-center">
-					<h2 className="inline">{selectedData.size} Yard Skip</h2> |
-					<span>Hire period: {selectedData.hire_period_days} days</span> |
-					<span>Price: £{selectedData.total}</span>
+				<div className="flex sm:gap-2 items-center sm:flex-row flex-col">
+					<h2 className="inline">{selectedData.size} Yard Skip</h2>
+					<span className="hidden sm:block">|</span>
+					<span>Hire period: {selectedData.hire_period_days} days</span>
+					<span className="hidden sm:block">|</span>
+					<span>Total Price: £{selectedData.total.toFixed(2)}</span>
 				</div>
 				<NextPrevButton size="small" color="success">
 					Continue

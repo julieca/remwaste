@@ -6,7 +6,7 @@ import "../../App.css";
 export type HeaderProps = {};
 export const Header: FC<HeaderProps> = () => {
 	return (
-		<div className="text-center mt-4">
+		<div className="text-center mt-8">
 			<Typography variant="h4" color="#32533a" className="font-semibold">
 				Choose Your Skip Size for Garden Waste
 			</Typography>

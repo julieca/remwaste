@@ -9,6 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
 	<React.StrictMode>
+		<title>Business Skip Hire</title>
 		<App />
 	</React.StrictMode>
 );
